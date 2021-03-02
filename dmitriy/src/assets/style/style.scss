@@ -1,0 +1,89 @@
+@import "normalize.css";
+@import "media.scss";
+@font-face {
+  font-family: 'bahnschrift';
+  src: url('../Bahnschrift-Font-Family/BAHNSCHRIFT1.TTF')  format('truetype'), /* Safari, Android, iOS */
+}
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,h2,h3,h4{
+  font-family: 'bahnschrift';
+  color:black;
+  font-size: 3rem;
+  margin: 0;
+  z-index: 3333;
+}
+
+p,a ,label{
+  font-family: 'bahnschrift';
+  color: black;
+  z-index: 3333;
+}
+section {
+  @include center;
+  justify-content: space-evenly;
+  height: 100vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 0;
+ 
+    }
+
+
+// about
+
+// @mixin center {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
+
+// .about {
+//   flex-direction: column;
+//   &_guy {
+//     @include center;
+//       flex-direction: column;
+//       justify-content: space-evenly;
+
+//     width: 100%;
+//     &_image {
+//       height: 300px;
+//       width: 90%;
+//       background-image: url("../images/1180577.jpg");
+//       background-size:cover;
+//       background-position: bottom;
+//       background-repeat: no-repeat;
+//       // box-shadow: 6px -8px #e5e5e5, 11px -15px rgba(3, 89, 166, 0.5),
+//       //   17px -22px #e5e5e5, 23px -29px rgba(254, 225, 1, 0.5),
+//       //   29px -36px #e5e5e5, 35px -43px rgba(252, 0, 0, 0.5), 41px -50px #e5e5e5,
+//       //   47px -57px rgba(0, 0, 0, 0.514);
+//       margin: auto;
+//     }
+//     &_text {
+//       text-align: left;
+//       max-width: 35ch;
+//       margin: 2rem  auto;
+//       h2,h3{
+//         font-size: 2.5rem;
+//       }
+
+//       .lang {
+//         margin-right: auto;
+//         display: flex;
+//         justify-content: flex-start;
+//         align-items: center;
+//         text-align: left;
+//         .icon {
+//           width: 30px;
+//           height: 30px;
+//           background: rgba(0, 0, 0, 0.397);
+//           margin-right: 4rem;
+//         }
+//       }
+//     }
+//   }
+// }
