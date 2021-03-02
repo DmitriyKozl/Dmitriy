@@ -1,5 +1,6 @@
 <template>
-  <section class="projects">
+<div class="background">
+    <section class="projects">
     <div class="title"><h1>Projects</h1></div>
     <div class="preview">
       <div class="icon"></div>
@@ -16,15 +17,32 @@
       <div class="icon"></div>
     </div>
   </section>
+        <Contact />
+</div>
+
+
 </template>
 
 <script>
+import Contact from "@/components/Contact.vue";
+
 export default {
   name: "Projects",
+  components:{
+        Contact,
+
+  }
 };
 </script>
 
 <style lang="scss" scoped>
+.background{
+  background-color:#BEB7B3
+ ;
+      //  background-image: url("../assets/images/lines.png");
+      // background-size:cover;
+      // background-position: center;
+}
 .projects {
   flex-direction: column;
   .title {

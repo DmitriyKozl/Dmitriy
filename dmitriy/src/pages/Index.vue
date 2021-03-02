@@ -6,7 +6,6 @@
       <Intro />
       <AboutThisGuy />
       <Projects />
-      <Contact />
     </div>
   </div>
 
@@ -19,7 +18,6 @@ import Layout from "~/layouts/Default.vue";
 import AboutThisGuy from "@/components/AboutThisGuy.vue";
 import Intro from "@/components/Intro.vue";
 import Projects from "@/components/projects.vue";
-import Contact from "@/components/Contact.vue";
 
 export default {
   name: "Home",
@@ -28,7 +26,6 @@ export default {
     
     AboutThisGuy,
     Projects,
-    Contact,
     Layout
   },
 };
@@ -40,7 +37,7 @@ export default {
   height: 100%;
 
   .content {
-    background: #e5e5e5;
+    background: #BEB7B3;
   }
 }
 </style>
