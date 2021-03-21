@@ -79,8 +79,8 @@ button {
   border: 5px solid #0073b6;
   border-radius: 100px;
   position: absolute;
-  right:30%;
-  bottom: -1rem;
+  right:25%;
+  bottom: -3rem;
   overflow: hidden;
   transform: translate(-100%, -100%);
   transition: 1s border, 0.75s transform;

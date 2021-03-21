@@ -118,21 +118,23 @@ export default {
 <style lang="scss">
 @mixin flexCenter() {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
 }
 .Mailcontainer {
   // padding: 4rem;
   @include flexCenter();
+  flex-wrap: wrap;  
   position: relative;
 
   .Contact_text {
     text-align: left;
-    max-width: 40ch;
+    max-width: 45ch;
     @include flexCenter();
     flex-direction: column;
     justify-content: space-between;
-    width: 100%;
+    // width: 100%;
     height: 50%;
+    margin:0 auto 4rem ;
   }
 
   .lang {
@@ -161,12 +163,14 @@ export default {
 .form {
   @include flexCenter();
   flex-direction: column;
-  flex: 1;
-  &-content {
+    // width: 70%;
+    flex:1 1 500px;
+    margin: auto;
+      &-content {
     @include flexCenter();
     justify-content: space-between;
     color: black;
-    width: 70%;
+    width: 90%;
     margin: 1rem auto;
     &-name,
     &-surname {
@@ -182,7 +186,7 @@ export default {
     flex-direction: column;
     text-align: left;
     color: black;
-    width: 70%;
+    width: 90%;
     margin: 1rem auto;
   }
   &-text {
@@ -190,7 +194,7 @@ export default {
     flex-direction: column;
     text-align: left;
     color: black;
-    width: 70%;
+    width: 90%;
     margin: 2rem auto;
     background: transparent;
   }

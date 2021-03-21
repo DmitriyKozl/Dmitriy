@@ -45,9 +45,9 @@ export default {
 }
 .sidenav {
   @include center;
-  max-width: 500px;
+  max-width: 400px;
   margin-left: auto;
-  margin-right: 5rem;
+  margin-right: 2rem;
   z-index: 33;
   height: 100px;
   right: 0;
@@ -59,9 +59,9 @@ export default {
   overflow-x: hidden;
   transition: 0.7s;
   a {
-    margin: 0 1.5rem;
+    
     padding: 0.8rem 2rem;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: "bahnschrift";
     cursor: pointer;
     &:nth-child(1) {
@@ -77,7 +77,7 @@ export default {
 }
 
 .active {
-  width: 500px;
+  width: 400px;
 }
 
 

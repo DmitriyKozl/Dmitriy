@@ -1,15 +1,12 @@
 <template>
   <Layout>
-
     <div class="home">
-    <div class="content">
-      <AboutThisGuy />
-      <Projects />
-          <Contact />
-
+      <div class="content">
+        <AboutThisGuy />
+        <Projects />
+        <Contact />
+      </div>
     </div>
-  </div>
-
   </Layout>
 </template>
 
@@ -19,20 +16,19 @@ import AboutThisGuy from "@/components/AboutThisGuy.vue";
 import Projects from "@/components/projects.vue";
 import Contact from "@/components/Contact.vue";
 
-
 export default {
   name: "Home",
-  components: {    
+  components: {
     AboutThisGuy,
     Projects,
     Layout,
-    Contact
+    Contact,
   },
 };
 </script>
 <style lang="scss">
 .home {
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 100%;
 
