@@ -4,12 +4,12 @@
   }
 }
 @mixin for-tablet-portrait {
-  @media (max-width: 600px) {
+  @media (max-width: 750px) {
     @content;
   }
 }
 @mixin for-tablet-landscape {
-  @media (min-width: 1000px) {
+  @media (max-width: 1000px) {
     @content;
   }
 }

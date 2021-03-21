@@ -65,6 +65,7 @@ export default {
         8px -11px white, 12px -14px rgba(254, 225, 1, 0.5), 14px -18px white,
         18px -22px rgba(252, 0, 0, 0.5), 21px -25px white;
       margin-left: 1rem;
+      margin: auto;
     }
     &_text {
       margin: auto;

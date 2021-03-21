@@ -1,16 +1,16 @@
 <template>
   <div class="banner">
     <div class="navigation">
-      <nav class="sidenav active">
+      <nav class="sidenav ">
         <g-link to="/home#about">About</g-link>
-        <g-link to="/home#work">Work</g-link>
+        <g-link to="/home#projects">Project</g-link>
         <g-link to="/home#contact">Contact</g-link>
       </nav>
     </div>
     <div class="banner_content">
       <div class="banner_content_text">
         <p>
-          Hi! I’m <strong>Dmitriy!</strong> and i’m what they call a
+          Hi! I’m <strong>Dmitriy!</strong> <br> and I’m what they call a
           frontend-developer
         </p>
       </div>
@@ -51,20 +51,15 @@ export default {
   height: 100vh;
   max-width: 1200px;
   margin: auto;
-  @mixin center() {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   .sidenav {
     @include center;
-    max-width: 400px;
+    width: 400px;
     margin-left: auto;
     margin-right: 2rem;
     z-index: 33;
     height: 100px;
     right: 0;
-    width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -88,36 +83,6 @@ export default {
     }
   }
 
-  .active {
-    width: 400px;
-  }
-
-  .hamburger {
-    cursor: pointer;
-    position: fixed;
-    right: 5%;
-    top: 3rem;
-    z-index: 10000;
-    height: 50px;
-    @include center;
-    flex-direction: column;
-    justify-content: space-evenly;
-    div {
-      width: 35px;
-      height: 5px;
-      &:nth-child(1) {
-        background: rgba(252, 0, 0, 0.5);
-      }
-      &:nth-child(2) {
-        background: rgba(254, 225, 1, 0.5);
-      }
-
-      &:nth-child(3) {
-        background: rgba(3, 89, 166, 0.5);
-      }
-    }
-  }
-
   .banner_content {
     @include center();
     height: 100%;
@@ -125,7 +90,12 @@ export default {
     &_text {
       margin: 0 auto;
       width: 50%;
-
+      @include for-tablet-portrait {
+        width: 100%;
+      }
+      @include for-phone-only {
+        width: 80%;
+      }
       p {
         margin: 5rem auto 0 0;
         font-size: 4.5rem;
@@ -134,10 +104,24 @@ export default {
         line-break: normal;
         font-weight: 200;
         max-width: 17ch;
+
         strong {
           text-shadow: 6px 0px rgba(3, 89, 166, 0.5),
             10px 0px rgba(252, 0, 0, 0.5);
         }
+        @include for-tablet-landscape {
+          font-size: 3.5rem;
+          max-width: 15ch;
+          margin: 0;
+        }
+        @include for-tablet-portrait {
+          max-width: 19ch;
+          font-size: 3.5rem;
+          margin: auto;
+        }
+         @include for-phone-only {
+        width: 80%;
+      }
       }
     }
     &_forms {
@@ -166,6 +150,9 @@ export default {
           border: 3px solid rgba(254, 225, 1, 0.5);
           right: 10rem;
         }
+      }
+      @include for-tablet-portrait {
+        display: none;
       }
     }
   }
