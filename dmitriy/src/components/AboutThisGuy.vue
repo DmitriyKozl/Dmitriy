@@ -1,5 +1,5 @@
 <template>
-  <section class="about">
+  <section class="about" id="about">
     <div class="about_guy">
       <div class="about_guy_image"></div>
       <div class="about_guy_text">
@@ -13,18 +13,21 @@
         </p>
         <h2>Languages he knows.</h2>
         <div class="lang">
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
-          <div class="icon"></div>
+        <font-awesome class="icon" :icon="['fab', 'github']"/>
+        <font-awesome class="icon" :icon="['fab', 'sass']"/>
+        <font-awesome class="icon" :icon="['fab', 'js']"/>
+        <font-awesome class="icon" :icon="['fab', 'vuejs']"/>
+        <font-awesome class="icon" :icon="['fab', 'css3']"/>
+        <font-awesome class="icon" :icon="['fab', 'html5']"/>
+        <font-awesome class="icon" :icon="['fab', 'bootstrap']"/>
+
         </div>
       </div>
     </div>
   </section>
 </template>
-
 <script>
+
 export default {
   name: "AboutThisGuy",
   data() {
@@ -41,43 +44,72 @@ export default {
 }
 
 .about {
+  flex-wrap: wrap;
   &_guy {
     @include center;
     width: 100%;
-    justify-content: space-evenly;
-     &_image {
-      height: 500px;
-      width: 400px;
+    height: 100%;
+    justify-content: space-between;
+    &_image {
+      height: 600px;
+      width: 500px;
       background-image: url("../assets/images/1180577.jpg");
-      background-size:cover;
+      background-size: cover;
       background-position: bottom;
       background-repeat: no-repeat;
-      box-shadow: 6px -8px #e5e5e5, 11px -15px rgba(3, 89, 166, 0.5),
-        17px -22px #e5e5e5, 23px -29px rgba(254, 225, 1, 0.5),
-        29px -36px #e5e5e5, 35px -43px rgba(252, 0, 0, 0.5), 41px -50px #e5e5e5,
-        47px -57px rgba(0, 0, 0, 0.514);
-      // margin: auto 5rem auto auto ;
-
+      box-shadow: 3px -4px white, 7px -8px rgba(3, 89, 166, 0.5),
+        8px -11px white, 12px -14px rgba(254, 225, 1, 0.5), 14px -18px white,
+        18px -22px rgba(252, 0, 0, 0.5), 21px -25px white;
+      // margin-right: auto;
     }
     &_text {
-      height: 500px;
+      // margin: auto;
+      height: 70%;
       @include center;
-flex-direction: column;      justify-content: space-evenly;
+      flex-direction: column;
+      justify-content: space-evenly;
       text-align: left;
-      max-width: 60ch;
+      max-width: 70ch;
+      // flex: 1;
       // margin: auto auto auto 5rem ;
-
-      .lang {
+      h1 {
         margin-right: auto;
+      }
+      h2 {
+        margin-right: auto;
+      }
+      .lang {
+        margin:  auto;
         display: flex;
-        justify-content: flex-start;
         align-items: center;
-        text-align: left;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
         .icon {
-          width: 30px;
-          height: 30px;
-          background: rgba(0, 0, 0, 0.397);
-          margin-right: 4rem;
+        font-size: 3rem;
+          // margin: 2rem 1rem;
+          &:nth-child(1){
+            color: black;
+          }
+              &:nth-child(2){
+          color: rgba(255, 3, 3, 0.397);
+          }
+              &:nth-child(3){
+            color: yellow;
+          }
+              &:nth-child(4){
+            color: rgb(54, 168, 54);
+          }
+              &:nth-child(5){
+            color: blue;
+          }
+              &:nth-child(6){
+            color: orangered;
+          }
+              &:nth-child(7){
+            color: rgb(90, 51, 90);
+          }
+
         }
       }
     }

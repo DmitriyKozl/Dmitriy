@@ -1,15 +1,23 @@
 <template>
-  <div class="Mailcontainer">
+  <section class="Mailcontainer" id="contact">
     <div class="Contact_text">
       <h4>Contact</h4>
       <p>
-        Liked what you see or just want to have a good talk over a great cup of
+        Liked what you saw? or just want to have a good talk over a great cup of
         coffee? Please don’t hesitate to contact me.
       </p>
       <div class="lang">
-        <div class="icon"></div>
-        <div class="icon"></div>
-        <div class="icon"></div>
+        <a class="icon" href="https://www.instagram.com/putumtssss/"
+          ><font-awesome
+            aria-hidden="true"
+            class="icon"
+            :icon="['fab', 'instagram']"
+        /></a>
+        <a
+          class="icon"
+          href="https://www.linkedin.com/in/dmitriy-kozlov-316959194/"
+          ><font-awesome :icon="['fab', 'linkedin']"
+        /></a>
       </div>
     </div>
     <form class="form" @submit.prevent="submit">
@@ -50,13 +58,20 @@
           :maxlength="message.maxlength"
         ></textarea>
       </div>
+      <Button />
     </form>
-  </div>
+  </section>
 </template>
 
 <script>
+// import emailjs from "emailjs-com";
+import Button from "@/components/Button.vue";
+
 export default {
   name: "Mail",
+  components: {
+    Button,
+  },
   data: function() {
     return {
       name: "",
@@ -74,6 +89,29 @@ export default {
       submitted: false,
     };
   },
+  methods: {
+    sendEmail: (e) => {
+      emailjs
+        .sendForm(
+          "service_0thlfia",
+          "template_q90aa9l",
+          e.target,
+          "user_nIRFuPFAc6aBya9B7x7iN"
+        )
+        .then(
+          (result) => {
+            console.log("SUCCESS!", result.status, result.text);
+          },
+          (error) => {
+            console.log("FAILED...", error);
+          }
+        );
+      e.target.reset();
+    },
+    activate() {
+      return (this.isActive = true);
+    },
+  },
 };
 </script>
 
@@ -83,39 +121,47 @@ export default {
   justify-content: center;
 }
 .Mailcontainer {
-  padding: 4rem;
+  // padding: 4rem;
   @include flexCenter();
+  position: relative;
 
   .Contact_text {
     text-align: left;
-    max-width: 50ch;
+    max-width: 40ch;
     @include flexCenter();
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 100%;
+    height: 50%;
   }
 
   .lang {
-    margin-right: auto;
     display: flex;
-    justify-content: baseline;
+    justify-content: space-evenly;
     align-items: center;
     text-align: left;
-    margin: 2rem auto 0 0;
+
     .icon {
-      width: 30px;
-      height: 30px;
-      background: rgba(0, 0, 0, 0.397);
-      margin-right: 4rem;
+      font-size: 3rem;
+      margin-right: auto;
+      &:nth-child(1) {
+        color: #d6249f;
+      }
+
+      &:nth-child(2) {
+        color: #0077b5;
+      }
     }
+  }
+  button {
+    margin: auto;
   }
 }
 
 .form {
   @include flexCenter();
   flex-direction: column;
-  width: 50%;
-
+  flex: 1;
   &-content {
     @include flexCenter();
     justify-content: space-between;

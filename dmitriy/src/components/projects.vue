@@ -1,72 +1,59 @@
 <template>
-<div class="background">
-    <section class="projects">
-    <div class="title"><h1>Projects</h1></div>
-    <div class="preview">
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-      <div class="icon"></div>
-    </div>
-  </section>
-        <Contact />
-</div>
-
-
+    <section class="projects" id="projects">
+      <div class="title"><h1>Projects</h1></div>
+      <div class="preview">
+        <g-link class="icon" target="_blank" href="">
+          <img src="@/assets/images/Capture.png" alt="" />
+        </g-link>
+        <g-link class="icon" target="_blank" href="">
+          <img src="@/assets/images/misomania.png" alt="" />
+        </g-link>
+        <g-link class="icon" target="_blank" href="">
+          <img src="@/assets/images/examenTemplate.png" alt="" />
+        </g-link>
+        <g-link class="icon" target="_blank" href="">
+          <img src="@/assets/images/daan.png" alt="" />
+        </g-link>
+      </div>
+    </section>
 </template>
 
 <script>
-import Contact from "@/components/Contact.vue";
 
 export default {
   name: "Projects",
-  components:{
-        Contact,
-
-  }
+  components: {
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-.background{
-  background-color:#BEB7B3
- ;
-      //  background-image: url("../assets/images/lines.png");
-      // background-size:cover;
-      // background-position: center;
-}
+
 .projects {
   flex-direction: column;
   .title {
     display: flex;
     align-content: center;
     justify-content: center;
-    height: 90px;
     width: 100%;
-
-  
   }
 
   .preview {
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    width: 80%;
+    width: 100%;
     .icon {
-      flex: 1 1 100px;
-      max-width: 100px;
-      height: 100px;
-      background: rgba(0, 0, 0, 0.397);
+      flex: 1 1 400px;
+      max-width: 600px;
+      // height: 400px;
       margin: 2rem 4rem;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
     }
   }
 }
