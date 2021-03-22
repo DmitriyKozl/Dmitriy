@@ -28,12 +28,9 @@ export default {
 </script>
 <style lang="scss">
 .home {
-  // position: relative;
   width: 100%;
   height: 100%;
 
-  .content {
-    // background: #BEB7B3;
-  }
+ 
 }
 </style>

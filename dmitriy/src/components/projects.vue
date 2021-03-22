@@ -1,36 +1,34 @@
 <template>
-    <section class="projects" id="projects">
-      <div class="title"><h1>Projects</h1></div>
-      <div class="preview">
-        <g-link class="icon" target="_blank" href="">
-          <img src="@/assets/images/Capture.png" alt="" />
-        </g-link>
-        <g-link class="icon" target="_blank" href="">
-          <img src="@/assets/images/misomania.png" alt="" />
-        </g-link>
-        <g-link class="icon" target="_blank" href="">
-          <img src="@/assets/images/examenTemplate.png" alt="" />
-        </g-link>
-        <g-link class="icon" target="_blank" href="">
-          <img src="@/assets/images/daan.png" alt="" />
-        </g-link>
-      </div>
-    </section>
+  <section class="projects" id="projects">
+    <div class="title"><h1>Projects</h1></div>
+    <div class="preview">
+      <g-link class="icon" target="_blank" href="">
+        <img src="@/assets/images/Capture.png" alt="" />
+      </g-link>
+      <g-link class="icon" to="/misomania" href="">
+        <img src="@/assets/images/misomania.png" alt="" />
+      </g-link>
+      <g-link class="icon" to="/example-site" href="">
+        <img src="@/assets/images/examenTemplate.png" alt="" />
+      </g-link>
+      <g-link class="icon" target="_blank" href="https://lev-dsgn.com/">
+        <img src="@/assets/images/daan.png" alt="" />
+      </g-link>
+    </div>
+  </section>
 </template>
 
 <script>
-
 export default {
   name: "Projects",
-  components: {
-  },
+  components: {},
 };
 </script>
 
 <style lang="scss" scoped>
-
 .projects {
   flex-direction: column;
+  justify-content: space-evenly;
   .title {
     display: flex;
     align-content: center;

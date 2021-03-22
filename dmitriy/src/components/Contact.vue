@@ -121,10 +121,11 @@ export default {
   justify-content: space-between;
 }
 .Mailcontainer {
-  // padding: 4rem;
+  padding: 8rem 0;
   @include flexCenter();
   flex-wrap: wrap;  
   position: relative;
+  height: unset;
 
   .Contact_text {
     text-align: left;

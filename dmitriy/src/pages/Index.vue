@@ -56,7 +56,7 @@ export default {
     @include center;
     width: 400px;
     margin-left: auto;
-    margin-right: 2rem;
+    margin-right: 4rem;
     z-index: 33;
     height: 100px;
     right: 0;

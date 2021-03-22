@@ -47,13 +47,13 @@ export default {
   @include center;
   max-width: 400px;
   margin-left: auto;
-  margin-right: 2rem;
+  margin-right: 4rem;
   z-index: 33;
   height: 100px;
   right: 0;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 1000000;
   top: 0;
   left: 0;
   overflow-x: hidden;
@@ -78,6 +78,7 @@ export default {
 
 .active {
   width: 400px;
+  background:white;
 }
 
 
