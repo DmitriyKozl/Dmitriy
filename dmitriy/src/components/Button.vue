@@ -3,7 +3,7 @@
     @click="activate"
     :class="{ active: isActive }"
     class="plane-send"
-    type=""
+    type="submit"
   >
     <g-image
       class="material-icons"
@@ -78,17 +78,18 @@ button {
   background-color: transparent;
   border: 5px solid #0073b6;
   border-radius: 100px;
-  position: absolute;
-  right:25%;
-  bottom: -3rem;
+  // position: absolute;
+  // right:25%;
+  // bottom: -3rem;
+  margin:auto;
   overflow: hidden;
-  transform: translate(-100%, -100%);
+  // transform: translate(-100%, -100%);
   transition: 1s border, 0.75s transform;
   outline: none;
   cursor: pointer;
   .material-icons {
     transform: rotate(360deg);
-    position: relative;
+    // position: relative;
     // padding: 1rem 1rem 1rem 1rem;
     transform-origin: top center;
     width: 75%;
@@ -112,7 +113,7 @@ button {
   }
 }
 .active {
-  transform: translate(-100%, calc(-100% + 2px));
+  // transform: translate(-100%, calc(-100% + 2px));
 
   .material-icons {
     animation: rotate-the-funk 2.25s forwards;

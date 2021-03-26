@@ -9,6 +9,7 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
     "devicon": "^2.10.1",
+    "emailjs-com": "^2.6.4",
     "gridsome": "^0.7.0",
     "gridsome-plugin-sass-resources-loader": "^0.0.3"
   },

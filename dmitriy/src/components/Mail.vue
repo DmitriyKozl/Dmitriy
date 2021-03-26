@@ -73,14 +73,16 @@
 
 <script>
 export default {
-  name: 'Mail',
+  name: "Mail",
   data: function() {
     return {
-      name: '',
-      surname: '',
+      isActive: false,
+
+      name: "",
+      surname: "",
 
       email: {
-        value: '',
+        value: "",
         valid: true,
       },
 
@@ -91,6 +93,7 @@ export default {
       submitted: false,
     };
   },
+ 
 };
 </script>
 
@@ -131,7 +134,7 @@ export default {
     font-size: 2rem;
     &::after {
       display: block;
-      content: ' ';
+      content: " ";
       width: 50px;
       height: 5px;
       background-color: #264653;
@@ -198,7 +201,7 @@ export default {
     @include flexCenter();
 
     width: 40%;
-    background-image: url('../assets/images/park.png');
+    background-image: url("../assets/images/park.png");
     background-repeat: no-repeat;
     background-position: bottom;
     background-size: cover;
@@ -212,7 +215,7 @@ export default {
         border-radius: 2rem;
         box-sizing: border-box;
         text-decoration: none;
-        font-family: 'Nanum Gothic', sans-serif;
+        font-family: "Nanum Gothic", sans-serif;
         font-weight: 600;
         font-size: 2rem;
         color: white;

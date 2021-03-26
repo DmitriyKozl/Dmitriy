@@ -20,7 +20,7 @@
         /></a>
       </div>
     </div>
-    <form class="form" @submit.prevent="submit">
+    <form class="form" @submit.prevent="sendEmail">
       <div class="form-content">
         <div class="form-content-name">
           <label class="label" for="name">Naam</label>
@@ -51,20 +51,33 @@
         <label class="label" for="textarea">Bericht</label>
         <textarea
           class="message"
-          name="textarea"
+          name="message"
           id="textarea"
           required=""
           v-model="message.text"
-          :maxlength="message.maxlength"
         ></textarea>
       </div>
-      <Button />
+      <button
+        @click="activate"
+        :class="{ active: isActive }"
+        class="plane-send"
+        type="submit"
+      >
+        <g-image
+          class="material-icons"
+          data-content="send"
+          src="~/assets/images/telegram.png"
+          alt=""
+        >
+        </g-image>
+      </button>
     </form>
   </section>
 </template>
 
 <script>
-// import emailjs from "emailjs-com";
+import emailjs from "emailjs-com";
+
 import Button from "@/components/Button.vue";
 
 export default {
@@ -74,6 +87,8 @@ export default {
   },
   data: function() {
     return {
+      isActive: false,
+
       name: "",
       surname: "",
 
@@ -93,8 +108,8 @@ export default {
     sendEmail: (e) => {
       emailjs
         .sendForm(
-          "service_0thlfia",
-          "template_q90aa9l",
+          "service_45w2qep",
+          "template_wgome6m",
           e.target,
           "user_nIRFuPFAc6aBya9B7x7iN"
         )
@@ -120,11 +135,12 @@ export default {
   display: flex;
   justify-content: space-between;
 }
+
 .Mailcontainer {
   padding: 8rem 0;
   @include flexCenter();
-  flex-wrap: wrap;  
-  position: relative;
+  flex-wrap: wrap;
+  // position: relative;
   height: unset;
 
   .Contact_text {
@@ -135,7 +151,7 @@ export default {
     justify-content: space-between;
     // width: 100%;
     height: 50%;
-    margin:0 auto 4rem ;
+    margin: 0 auto 4rem;
   }
 
   .lang {
@@ -164,10 +180,10 @@ export default {
 .form {
   @include flexCenter();
   flex-direction: column;
-    // width: 70%;
-    flex:1 1 500px;
-    margin: auto;
-      &-content {
+  // width: 70%;
+  flex: 1 1 500px;
+  margin: auto;
+  &-content {
     @include flexCenter();
     justify-content: space-between;
     color: black;
@@ -214,5 +230,93 @@ input {
   border-bottom: 1px solid #6ba9b2ce;
   outline: none;
   background: transparent;
+}
+@mixin center() {
+  display: flex;
+  justify-content: center;
+}
+
+@keyframes rotate-the-funk {
+  0% {
+    transform: rotate(360deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes shadow {
+  0% {
+    transform: scale(1) translate(-20%, -10%);
+  }
+  25% {
+    transform: scale(0.5) translate(-20%, -10%);
+  }
+  50% {
+    transform: scale(1) translate(-20%, -10%);
+  }
+  75% {
+    transform: scale(0.5) translate(-20%, -10%);
+  }
+  100% {
+    transform: scale(1) translate(-20%, -10%);
+  }
+}
+
+button {
+  width: 75px;
+  height: 75px;
+  display: grid;
+  place-items: center;
+  font-size: 2.85rem;
+  background-color: transparent;
+  border: 5px solid #0073b6;
+  border-radius: 100px;
+  // position: absolute;
+  // right:25%;
+  // bottom: -3rem;
+  margin: auto;
+  overflow: hidden;
+  // transform: translate(-100%, -100%);
+  transition: 1s border, 0.75s transform;
+  outline: none;
+  cursor: pointer;
+  .material-icons {
+    transform: rotate(360deg);
+    // position: relative;
+    // padding: 1rem 1rem 1rem 1rem;
+    transform-origin: top center;
+    width: 75%;
+    height: 75%;
+
+    object-fit: contain;
+    object-position: center;
+    object-fit: scale-down;
+    @include center();
+
+    &:before {
+      content: attr(data-content);
+      // position: absolute;
+      color: #0073b6;
+      left: 50%;
+      bottom: 0;
+      transform: scale(1) translate(-20%, -10%);
+      z-index: -1;
+      transform-origin: bottom center;
+    }
+  }
+}
+.active {
+  // transform: translate(-100%, calc(-100% + 2px));
+
+  .material-icons {
+    animation: rotate-the-funk 2.25s forwards;
+    &:before {
+      animation: shadow 2.25s forwards;
+    }
+  }
 }
 </style>
