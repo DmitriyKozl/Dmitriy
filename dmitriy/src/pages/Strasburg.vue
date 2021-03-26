@@ -4,7 +4,7 @@
   <div class="Strasburg">
     <div class="banner">
       <div class="title">
-        <h1>{{ title }}</h1>
+        <g-link to="/misomania">{{ title }}</g-link>
         <span>published on {{ date }}</span>
       </div>
     </div>
@@ -187,7 +187,7 @@ export default {
       @include flexCenter(row);
       height: 300px;
       position: relative;
-      h1 {
+      a {
         font-size: 4rem;
         margin: auto;
         display: flex;

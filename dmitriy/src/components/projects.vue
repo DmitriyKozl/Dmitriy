@@ -2,17 +2,24 @@
   <section class="projects" id="projects">
     <div class="title"><h1>Projects</h1></div>
     <div class="preview">
-      <g-link class="icon" target="_blank" href="">
+      <g-link class="icon" to="/into-the-wild" href="">
         <img src="@/assets/images/Capture.png" alt="" />
+                <p>Woudloper landingpage</p>
+
       </g-link>
       <g-link class="icon" to="/misomania" href="">
         <img src="@/assets/images/misomania.png" alt="" />
+        <p>Misomania blog landingpage</p>
       </g-link>
       <g-link class="icon" to="/example-site" href="">
         <img src="@/assets/images/examenTemplate.png" alt="" />
+                <p>Travel webpage example</p>
+
       </g-link>
       <g-link class="icon" target="_blank" href="https://lev-dsgn.com/">
         <img src="@/assets/images/daan.png" alt="" />
+                <p>Portfolio page</p>
+
       </g-link>
     </div>
   </section>
@@ -47,10 +54,30 @@ export default {
       max-width: 600px;
       // height: 400px;
       margin: 2rem 4rem;
+ cursor: pointer;
+    &:nth-child(1) {
+      border-bottom: 5px solid rgba(252, 0, 0, 0.5);
+         img {
+        width: 100%;
+        object-fit: contain;
+
+      }
+    }
+    &:nth-child(2) {
+      border-bottom: 5px solid rgba(3, 89, 166, 0.5);
+
+    }
+    &:nth-child(3) {
+      border-bottom: 5px solid rgba(254, 225, 1, 0.5);
+    }
+       &:nth-child(4) {
+      border-bottom: 5px solid rgb(54, 168, 54);
+    }
 
       img {
         width: 100%;
         object-fit: cover;
+
       }
     }
   }
