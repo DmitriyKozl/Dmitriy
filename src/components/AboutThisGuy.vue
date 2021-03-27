@@ -11,7 +11,7 @@
           moment changed that, entirely. I don't know why but making a website
           from scratch that works out in the end, it's like a magic show for
           grown-ups. Besides this, I play the guitar as well, and not even that
-          bad. Singing and playing music is something I've been doing since I
+          bad. Singing and playing music is something I've been doing since I 
           was little, and I never stopped. It's been my way to be creative since
           '00, baby.
         </p>
