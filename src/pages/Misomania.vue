@@ -12,14 +12,14 @@
 
       <div class="preview_container">
         <section v-for="image in bgImages" :key="image.id">
-          <div
+          <g-image
             to="/strasburg"
             :style="{
               'background-image':
                 'url(' + require('~/assets/' + image.src) + ')',
             }"
             class="preview_img"
-          ></div>
+          ></g-image>
           <g-link to="/strasburg" class="titleImage">
             <h2>{{ image.title }}</h2>
           </g-link>
