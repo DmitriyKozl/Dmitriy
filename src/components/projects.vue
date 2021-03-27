@@ -12,11 +12,7 @@
 
         <p>Misomania blog landingpage</p>
       </g-link>
-      <g-link class="icon" to="/example-site" href="">
-        <g-image src="@/assets/images/examenTemplate.png" alt=""> </g-image>
-
-        <p>Travel webpage example</p>
-      </g-link>
+     
       <g-link class="icon" target="_blank" href="https://lev-dsgn.com/">
         <g-image src="@/assets/images/daan.png" alt=""> </g-image> 
 
