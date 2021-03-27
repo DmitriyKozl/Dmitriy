@@ -5,12 +5,15 @@
       <div class="about_guy_text">
         <h1>Who's that guy</h1>
         <p>
-         From an early age on I adored to be involved in building out creative projects,from  Lego
-          blocks to telling stories. I was  a jack of all trades but sadly always a master of
-          none . Until my first contact with coding, from that moment on I realized
-          I wanted to become a master of what it had to offer. I still have a way
-          I never shy away from a challenge, I always stand
-          eager to let my curiosity take its course.
+          Since I discovered coding a few years ago I finally found something I
+          wanted to master. Before I was a so-called "Jack of all trades, master
+          of none". I started a lot of things but never ended them. But one
+          moment changed that, entirely. I don't know why but making a website
+          from scratch that works out in the end, it's like a magic show for
+          grown-ups. Besides this, I play the guitar as well, and not even that
+          bad. Singing and playing music is something I've been doing since I
+          was little, and I never stopped. It's been my way to be creative since
+          '00, baby.
         </p>
         <h2>Languages he knows.</h2>
         <div class="lang">
