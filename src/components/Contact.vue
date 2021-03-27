@@ -63,7 +63,7 @@
       </div>
       <button
         @click="activate"
-        :class="{ active: isActive }"
+        :class="{ activate: isActive }"
         class="plane-send"
         type="submit"
       >
@@ -303,8 +303,7 @@ button {
     }
   }
 }
-.active {
-  width: unset;
+.activate {
   transform: translate(0, calc(0 + 2px));
 
   .material-icons {
