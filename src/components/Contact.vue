@@ -304,7 +304,7 @@ button {
   }
 }
 .activate {
-  transform: translate(0, calc(0 + 2px));
+  // transform: translate(0, calc(0 + 2px));
 
   .material-icons {
     animation: rotate-the-funk 2.25s forwards;
