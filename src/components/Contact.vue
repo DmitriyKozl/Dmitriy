@@ -131,7 +131,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @mixin flexCenter() {
   display: flex;
   justify-content: space-between;

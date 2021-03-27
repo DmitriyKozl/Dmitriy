@@ -75,7 +75,7 @@ export default {
   },
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 @mixin flexCentered($direction) {
   display: flex;
   justify-content: center;
