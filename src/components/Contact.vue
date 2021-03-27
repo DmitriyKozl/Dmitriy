@@ -304,6 +304,7 @@ button {
   }
 }
 .active {
+  width: unset;
   transform: translate(0, calc(0 + 2px));
 
   .material-icons {
