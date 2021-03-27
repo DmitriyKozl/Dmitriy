@@ -24,13 +24,13 @@
         /></a>
       </div>
     </div>
-    <form class="form" @submit.prevent="sendEmail">
-      <div class="form-content">
-        <div class="form-content-name">
+    <form class="mainForm" @submit.prevent="sendEmail">
+      <div class="mainForm-content">
+        <div class="mainForm-content-name">
           <label class="label" for="name">Naam</label>
           <input type="text" name="name" id="name" required="" v-model="name" />
         </div>
-        <div class="form-content-surname">
+        <div class="mainForm-content-surname">
           <label class="label" for="surname">Voornaam</label>
           <input
             type="text"
@@ -41,7 +41,7 @@
           />
         </div>
       </div>
-      <div class="form-email">
+      <div class="mainForm-email">
         <label class="label" for="email">Email</label>
         <input
           type="email"
@@ -51,7 +51,7 @@
           v-model="email.value"
         />
       </div>
-      <div class="form-text">
+      <div class="mainForm-text">
         <label class="label" for="textarea">Bericht</label>
         <textarea
           class="message"
@@ -176,7 +176,7 @@ export default {
   }
 }
 
-.form {
+.mainForm {
   @include flexCenter();
   flex-direction: column;
   flex: 1 1 500px;
