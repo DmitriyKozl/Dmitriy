@@ -17,6 +17,10 @@
           class="icon"
           href="https://www.linkedin.com/in/dmitriy-kozlov-316959194/"
           ><font-awesome :icon="['fab', 'linkedin']"
+        /></a>  <a
+          class="icon"
+          href="https://github.com/DmitriyKozl"
+          ><font-awesome :icon="['fab', 'github']"
         /></a>
       </div>
     </div>

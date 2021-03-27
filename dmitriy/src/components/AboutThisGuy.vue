@@ -5,12 +5,12 @@
       <div class="about_guy_text">
         <h1>Who's that guy</h1>
         <p>
-          Van jongs af aan hield ik me graag bezig met creatief bouwen, van lego
-          blokken tot verhalen. ik was altijd een “jack of all trades master of
-          none”. Tot ik in aaraking kwam met code, dat moment was het besef dat
-          ik een meester wou worden in wat het te bieden had. Ik heb nog een weg
-          af te leggen, maar een uitdaging ga ik nooit uit de weg, ik sta altijd
-          te popelen om mijn leergierigheid zijn gang te laten gaan.
+         From an early age on I adored to be involved in building out creative projects,from  Lego
+          blocks to telling stories. I was  a jack of all trades but sadly always a master of
+          none . Until my first contact with coding, from that moment on I realized
+          I wanted to become a master of what it had to offer. I still have a way
+          I never shy away from a challenge, I always stand
+          eager to let my curiosity take its course.
         </p>
         <h2>Languages he knows.</h2>
         <div class="lang">
