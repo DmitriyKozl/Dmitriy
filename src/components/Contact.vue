@@ -86,9 +86,7 @@ import Button from "@/components/Button.vue";
 
 export default {
   name: "Mail",
-  components: {
-    Button,
-  },
+
   data: function() {
     return {
       isActive: false,
@@ -187,6 +185,7 @@ export default {
   // width: 70%;
   flex: 1 1 500px;
   margin: auto;
+  background: none;
   &-content {
     @include flexCenter();
     justify-content: space-between;
