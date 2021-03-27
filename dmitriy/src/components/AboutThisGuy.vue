@@ -17,7 +17,7 @@
         </p>
         <h2>Languages he knows.</h2>
         <div class="lang">
-          <font-awesome class="icon" :icon="['fab', 'github']" />
+          <font-awesome class="icon" :icon="['fab', 'github']" /> 
           <font-awesome class="icon" :icon="['fab', 'sass']" />
           <font-awesome class="icon" :icon="['fab', 'js']" />
           <font-awesome class="icon" :icon="['fab', 'vuejs']" />
