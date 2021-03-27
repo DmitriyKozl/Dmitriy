@@ -82,7 +82,6 @@
 <script>
 import emailjs from "emailjs-com";
 
-import Button from "@/components/Button.vue";
 
 export default {
   name: "Mail",
@@ -142,7 +141,6 @@ export default {
   padding: 8rem 0;
   @include flexCenter();
   flex-wrap: wrap;
-  // position: relative;
   height: unset;
 
   .Contact_text {
@@ -151,7 +149,6 @@ export default {
     @include flexCenter();
     flex-direction: column;
     justify-content: space-between;
-    // width: 100%;
     height: 50%;
     margin: 0 auto 4rem;
   }
@@ -182,7 +179,6 @@ export default {
 .form {
   @include flexCenter();
   flex-direction: column;
-  // width: 70%;
   flex: 1 1 500px;
   margin: auto;
   background: none;
@@ -278,19 +274,15 @@ button {
   background-color: transparent;
   border: 5px solid #0073b6;
   border-radius: 100px;
-  // position: absolute;
-  // right:25%;
-  // bottom: -3rem;
+
   margin: auto;
   overflow: hidden;
-  // transform: translate(-100%, -100%);
   transition: 1s border, 0.75s transform;
   outline: none;
   cursor: pointer;
   .material-icons {
     transform: rotate(360deg);
-    // position: relative;
-    // padding: 1rem 1rem 1rem 1rem;
+
     transform-origin: top center;
     width: 75%;
     height: 75%;
@@ -302,18 +294,17 @@ button {
 
     &:before {
       content: attr(data-content);
-      // position: absolute;
       color: #0073b6;
       left: 50%;
       bottom: 0;
-      transform: scale(1) translate(-20%, -10%);
+      // transform: scale(1) translate(-20%, -10%);
       z-index: -1;
       transform-origin: bottom center;
     }
   }
 }
 .active {
-  // transform: translate(-100%, calc(-100% + 2px));
+  transform: translate(0, calc(0 + 2px));
 
   .material-icons {
     animation: rotate-the-funk 2.25s forwards;
