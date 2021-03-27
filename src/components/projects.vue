@@ -18,7 +18,7 @@
         <p>Travel webpage example</p>
       </g-link>
       <g-link class="icon" target="_blank" href="https://lev-dsgn.com/">
-        <g-image src="@/assets/images/daan.png" alt=""> </g-image>
+        <g-image src="@/assets/images/daan.png" alt=""> </g-image> 
 
         <p>Portfolio page</p>
       </g-link>
