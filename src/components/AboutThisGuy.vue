@@ -11,13 +11,13 @@
           moment changed that, entirely. I don't know why but making a website
           from scratch that works out in the end, it's like a magic show for
           grown-ups. Besides this, I play the guitar as well, and not even that
-          bad. Singing and playing music is something I've been doing since I 
+          bad. Singing and playing music is something I've been doing since I
           was little, and I never stopped. It's been my way to be creative since
           '00, baby.
         </p>
         <h2>Languages he knows.</h2>
         <div class="lang">
-          <font-awesome class="icon" :icon="['fab', 'github']" /> 
+          <font-awesome class="icon" :icon="['fab', 'github']" />
           <font-awesome class="icon" :icon="['fab', 'sass']" />
           <font-awesome class="icon" :icon="['fab', 'js']" />
           <font-awesome class="icon" :icon="['fab', 'vuejs']" />
@@ -88,9 +88,9 @@ export default {
   }
   h1 {
     margin-right: auto;
-         @include for-phone-only {
-       margin-right: unset;
-      }
+    @include for-phone-only {
+      margin-right: unset;
+    }
   }
   h2 {
     margin-right: auto;
@@ -100,11 +100,15 @@ export default {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
+ 
     .icon {
       font-size: 3rem;
-      // margin: 2rem 1rem;
+      @include for-phone-only {
+        font-size: 2.5rem;
+        margin: 0.3rem 0.5rem;
+      }
       &:nth-child(1) {
         color: black;
       }
