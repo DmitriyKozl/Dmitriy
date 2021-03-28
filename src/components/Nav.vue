@@ -61,7 +61,7 @@ export default {
   left: 0;
   overflow-x: hidden;
   transition: 0.7s;
-  position: fixed;
+  position: absolute;
   @include for-phone-only {
     max-width: 100%;
     flex-direction: column;
@@ -98,13 +98,15 @@ export default {
   width: 400px;
   background: white;
   @include for-phone-only {
-    height: 400px;
+    height: 300px;
     width: 100%;
+
+
       }
 }
 .hamburger {
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   right: 5%;
   top: 3rem;
   z-index: 10000;
@@ -113,8 +115,9 @@ export default {
   flex-direction: column;
   justify-content: space-evenly;
    @include for-phone-only {
-margin-left: 30px;
-right: 48%;  }
+       right: 10%;
+
+ }
   div {
     width: 35px;
     height: 5px;
