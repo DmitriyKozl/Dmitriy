@@ -18,7 +18,7 @@
       <div class="content" v-for="sections in content" :key="sections.text">
         <p>{{ sections.text }}</p>
         <div class="content__image">
-          <img :src="sections.image" alt="" />
+          <g-image :src="sections.image" alt=""></g-image>
         </div>
       </div>
     </main>
