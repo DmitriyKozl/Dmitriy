@@ -7,6 +7,7 @@
         <Contact />
       </div>
     </div>
+    <footer><h1> <span>	&#169;</span> Dmitriy S.</h1></footer>
   </Layout>
 </template>
 
@@ -37,5 +38,23 @@ export default {
         width: 80%;
         margin:auto;
       }
+}
+footer{
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+              background-image: url("../assets/images/forms.png");
+              background-position: center;
+              background-size:cover;
+  h1{
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: 1rem;
+  span{
+    height: 100%;
+  }
+  }
 }
 </style>

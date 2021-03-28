@@ -59,6 +59,7 @@ export default {
       flex: 1 1 400px;
 
       height: 500px;
+
       max-width: 400px;
       background-image: url("../assets/images/1180577.jpg");
       background-size: cover;

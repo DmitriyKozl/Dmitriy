@@ -138,7 +138,7 @@ export default {
 }
 
 .Mailcontainer {
-  padding: 8rem 0;
+  padding: 8rem 0 4rem;
   @include flexCenter();
   flex-wrap: wrap;
   height: unset;
@@ -318,4 +318,5 @@ button {
     }
   }
 }
+
 </style>
