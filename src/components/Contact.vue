@@ -6,7 +6,7 @@
         Liked what you saw? or just want to have a good talk over a great cup of
         coffee? Please don’t hesitate to contact me.
       </p>
-      <div class="lang">
+      <div class="media">
         <a class="icon" href="https://www.instagram.com/putumtssss/"
           ><font-awesome
             aria-hidden="true"
@@ -17,9 +17,8 @@
           class="icon"
           href="https://www.linkedin.com/in/dmitriy-kozlov-316959194/"
           ><font-awesome :icon="['fab', 'linkedin']"
-        /></a>  <a
-          class="icon"
-          href="https://github.com/DmitriyKozl"
+        /></a>
+        <a class="icon" href="https://github.com/DmitriyKozl"
           ><font-awesome :icon="['fab', 'github']"
         /></a>
       </div>
@@ -81,7 +80,6 @@
 
 <script>
 import emailjs from "emailjs-com";
-
 
 export default {
   name: "Mail",
@@ -155,15 +153,17 @@ export default {
     margin: 0 auto 4rem;
   }
 
-  .lang {
+  .media {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    text-align: left;
 
     .icon {
       font-size: 3rem;
       margin-right: auto;
+      @include for-phone-only {
+        margin-right: unset;
+      }
       &:nth-child(1) {
         color: #d6249f;
       }
@@ -184,9 +184,9 @@ export default {
   flex: 1 1 300px;
   margin: auto;
   background: none;
-   @include for-phone-only {
+  @include for-phone-only {
     width: 100%;
-      }
+  }
   &-content {
     @include flexCenter();
     justify-content: space-between;

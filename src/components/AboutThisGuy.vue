@@ -88,6 +88,9 @@ export default {
   }
   h1 {
     margin-right: auto;
+         @include for-phone-only {
+       margin-right: unset;
+      }
   }
   h2 {
     margin-right: auto;
