@@ -48,7 +48,7 @@ export default {
 
 .sidenav {
   @include center;
-  max-width: 400px;
+  max-width: 380px;
   margin-left: auto;
   margin-right: 4rem;
   z-index: 33;
@@ -72,10 +72,12 @@ export default {
   }
 }
 .link {
-  width: 80%;
+  width: 100%;
   // padding: 1rem 0;
   // @include center();
   @include for-phone-only {
+      width: 80%;
+
 &:nth-child(1) {
     
       border-left: 5px solid rgba(252, 0, 0, 0.5);
@@ -100,18 +102,25 @@ export default {
     font-family: "bahnschrift";
     cursor: pointer;
     background: none;
+    
   }
   &:nth-child(1) {
     a {
       border-bottom: 5px solid rgba(252, 0, 0, 0.5);
+       @include for-phone-only {
+      border: none;}
     }
   }&:nth-child(2) {
     a {
     border-bottom: 5px solid rgba(3, 89, 166, 0.5);
+     @include for-phone-only {
+      border: none;}
     }
   }&:nth-child(3) {
     a {
     border-bottom: 5px solid rgba(254, 225, 1, 0.5);
+     @include for-phone-only {
+      border: none;}
     }
   }
 
