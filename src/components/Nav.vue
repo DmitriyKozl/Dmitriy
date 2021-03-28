@@ -11,9 +11,9 @@
     </div>
 
     <nav @click="close()" :class="{ active: sideNavIsActive }" class="sidenav">
-      <g-link to="/home#about">About</g-link>
-      <g-link to="/home#projects">Projects</g-link>
-      <g-link to="/home#contact">Contact</g-link>
+      <div class="link"><g-link to="/home#about">About</g-link></div>
+      <div class="link"><g-link to="/home#projects">Projects</g-link></div>
+      <div class="link"><g-link to="/home#contact">Contact</g-link></div>
     </nav>
   </div>
 </template>
@@ -38,50 +38,70 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/style/media.scss";
+
 @mixin center() {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .sidenav {
   @include center;
   max-width: 400px;
   margin-left: auto;
   margin-right: 4rem;
   z-index: 33;
+
   height: 100px;
   right: 0;
   width: 0;
-  position: fixed;
   z-index: 1000000;
   top: 0;
   left: 0;
   overflow-x: hidden;
   transition: 0.7s;
+  position: fixed;
+  @include for-phone-only {
+    max-width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: unset;
+    height: 0;
+    width: 100%;
+  }
+}
+.link {
   a {
-    
     padding: 0.8rem 2rem;
     font-size: 1.2rem;
     font-family: "bahnschrift";
     cursor: pointer;
-    &:nth-child(1) {
+  }
+  &:nth-child(1) {
+    a {
       border-bottom: 5px solid rgba(252, 0, 0, 0.5);
     }
-    &:nth-child(2) {
-      border-bottom: 5px solid rgba(3, 89, 166, 0.5);
+  }&:nth-child(2) {
+    a {
+    border-bottom: 5px solid rgba(3, 89, 166, 0.5);
     }
-    &:nth-child(3) {
-      border-bottom: 5px solid rgba(254, 225, 1, 0.5);
+  }&:nth-child(3) {
+    a {
+    border-bottom: 5px solid rgba(254, 225, 1, 0.5);
     }
   }
+
 }
 
 .active {
   width: 400px;
-  background:white;
+  background: white;
+  @include for-phone-only {
+    height: 400px;
+    width: 100%;
+      }
 }
-
-
 .hamburger {
   cursor: pointer;
   position: fixed;
@@ -92,6 +112,9 @@ export default {
   @include center;
   flex-direction: column;
   justify-content: space-evenly;
+   @include for-phone-only {
+margin-left: 30px;
+right: 48%;  }
   div {
     width: 35px;
     height: 5px;

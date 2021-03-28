@@ -27,10 +27,15 @@ export default {
 };
 </script>
 <style lang="scss" scoped >
+@import "~/assets/style/media.scss";
+
 .home {
   width: 100%;
   height: 100%;
 
- 
+   @include for-phone-only {
+        width: 80%;
+        margin:auto;
+      }
 }
 </style>

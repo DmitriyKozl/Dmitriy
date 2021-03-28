@@ -41,7 +41,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 @import "~/assets/style/media.scss";
+
 @mixin center() {
   display: flex;
   justify-content: center;
@@ -51,16 +53,22 @@ export default {
   height: 100vh;
   max-width: 1200px;
   margin: auto;
+.navigation{
+  max-width: 1200px;
+  margin: auto;
+  height: 10%;
+  position: relative;
+
 
   .sidenav {
     @include center;
     width: 400px;
     margin-left: auto;
-    margin-right: 4rem;
+    // margin-right: 4rem;
     z-index: 33;
     height: 100px;
     right: 0;
-    position: fixed;
+    position: absolute;
     z-index: 1;
     top: 0;
     left: 0;
@@ -82,10 +90,10 @@ export default {
       }
     }
   }
-
+}
   .banner_content {
     @include center();
-    height: 100%;
+    height: 80%;
 
     &_text {
       margin: 0 auto;

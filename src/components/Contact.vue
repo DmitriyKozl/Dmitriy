@@ -132,6 +132,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "~/assets/style/media.scss";
+
 @mixin flexCenter() {
   display: flex;
   justify-content: space-between;
@@ -179,9 +181,12 @@ export default {
 .mainForm {
   @include flexCenter();
   flex-direction: column;
-  flex: 1 1 500px;
+  flex: 1 1 300px;
   margin: auto;
   background: none;
+   @include for-phone-only {
+    width: 100%;
+      }
   &-content {
     @include flexCenter();
     justify-content: space-between;

@@ -19,6 +19,7 @@ Nav
 
 </script>
 
-<style>
+<style lang="scss" scoped>
+@import "~/assets/style/media.scss";
 
 </style>
