@@ -75,6 +75,7 @@ export default {
   width: 80%;
   // padding: 1rem 0;
   // @include center();
+  @include for-phone-only {
 &:nth-child(1) {
     
       border-left: 5px solid rgba(252, 0, 0, 0.5);
@@ -91,15 +92,28 @@ export default {
       border-right: 5px solid rgba(3, 89, 166, 0.5);
 
   }
+  }
 
   a {
-    padding: 0.8rem 2rem ;
+    padding: 0.8rem 2rem;
     font-size: 1.2rem;
     font-family: "bahnschrift";
     cursor: pointer;
     background: none;
   }
-
+  &:nth-child(1) {
+    a {
+      border-bottom: 5px solid rgba(252, 0, 0, 0.5);
+    }
+  }&:nth-child(2) {
+    a {
+    border-bottom: 5px solid rgba(3, 89, 166, 0.5);
+    }
+  }&:nth-child(3) {
+    a {
+    border-bottom: 5px solid rgba(254, 225, 1, 0.5);
+    }
+  }
 
 }
 
