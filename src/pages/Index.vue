@@ -10,7 +10,7 @@
     <div class="banner_content">
       <div class="banner_content_text">
         <p>
-          Hi! I’m <strong>Dmitriy!</strong> <br> and I’m what they call a
+          Hi! I’m <strong>Kozlov!</strong> <br> and I’m what they call a
           frontend-developer
         </p>
       </div>
